@@ -10,6 +10,9 @@ if (screenshots.length < 3 || screenshots.length > 4) {
   throw new Error('The entry needs three or four screenshots.');
 }
 mkdirSync(target,{recursive:true});
+if (readdirSync(target).length > 0) {
+  throw new Error('Set MAKEFUN_OUTPUT_DIR to an empty directory before building.');
+}
 for (const folder of ['game','screenshots']) {
   cpSync(join(root,folder),join(target,folder),{recursive:true});
 }
