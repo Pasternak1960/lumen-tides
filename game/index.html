@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lumen Tides</title><link rel="icon" href="data:,">
+<link rel="stylesheet" href="coast.css">
+<script defer src="levels.js"></script>
+<script defer src="optics.js"></script>
+<script defer src="game.js"></script>
+</head>
+<body>
+<header><span class="mark" aria-hidden="true">✧</span><span>LUMEN TIDES</span><button id="sound" aria-pressed="false">Sound off</button></header>
+<main>
+<section class="log">
+<p class="coordinates" id="coordinates">NORTH COAST OBSERVATORY</p>
+<h1 id="title">Lumen<br>Tides</h1>
+<p id="story">A storm has darkened the coast. Turn the mirrors in the old relay network and bring five lighthouses back to life.</p>
+<div id="progress" aria-label="Beacon progress"></div>
+<div class="meter" id="meter" hidden><div><strong id="signal">0/1</strong><small>Stations lit</small></div><div><strong id="turns">0</strong><small>Turns</small></div></div>
+<button class="primary" id="action">Begin the watch <span aria-hidden="true">→</span></button>
+<div class="commands" id="commands" hidden><button id="undo">Undo</button><button id="reset">Reset</button><button id="hint">Hint</button></div>
+<p id="message" role="status"></p>
+</section>
+<section class="chart" aria-label="Optical chart">
+<div class="chartbar"><span id="chartname">NIGHT CHART / NORTH COAST</span><span aria-hidden="true">✦ N</span></div>
+<div id="board"></div>
+<div class="chartbar legend"><span><b>◇</b> Station</span><span><b>◩</b> Relay</span><span><b>✦</b> Splitter</span></div>
+</section>
+</main>
+<footer><span>COASTAL SIGNAL SERVICE</span><span>Click a relay to turn it · Arrow keys + Space</span></footer>
+</body>
+</html>
+
